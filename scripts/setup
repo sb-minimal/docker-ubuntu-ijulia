@@ -14,8 +14,8 @@ apt-get -y install julia pandoc ipython ipython-notebook nettle-dev sudo
 addgroup --gid 1000 user
 adduser --system --home /data --no-create-home --uid 1000 --group user
 
+mkdir -p /data
 chown user:user -R /data 
-
 cd /data
 
 sudo -H -u user julia -e "Pkg.add(\"IJulia\")"
