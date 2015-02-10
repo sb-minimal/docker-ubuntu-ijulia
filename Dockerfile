@@ -8,7 +8,7 @@ RUN chmod +x /scripts/*; /scripts/setup; /scripts/cleanup -f bash sh dash cat tt
 WORKDIR /data
 
 # Define default command.
-CMD sudo -H -u user ipython notebook --port=8888 --ip=0.0.0.0 --profile=julia --no-browser
+CMD sudo -H -u user ipython notebook --port=8888 --ip=0.0.0.0 --profile=julia --no-browser --notebook-dir=/data/notebooks
 
 EXPOSE 8888
 
